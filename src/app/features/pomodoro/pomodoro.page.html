@@ -1,0 +1,58 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>POMODORO</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-segment (ionChange)="segmentChanged($event)" color="primary">
+        <ion-segment-button value="Pomodoro">
+          <ion-label>
+            <p class="pomodoro-text">Pomodoro</p>
+          </ion-label>
+        </ion-segment-button>
+        <ion-segment-button value="Short Break">
+          <ion-label>
+            <p class="short-break-text">Short Break</p>
+          </ion-label>
+        </ion-segment-button>
+        <ion-segment-button value="Long Break">
+          <ion-label>
+            <p class="long-break-text">Long Break</p>
+          </ion-label>
+        </ion-segment-button>
+      </ion-segment>
+    </ion-card-header>
+
+    <ion-card-content>
+      <ion-text style="text-align: center">
+        <h1 style="font-size: 54px; color: black">
+          {{ time * 1000 | date:'mm:ss'}}
+        </h1>
+      </ion-text>
+      <ion-grid fixed>
+        <ion-row>
+          <ion-col style="text-align: center">
+            <p>Pomodoro</p>
+            <ion-card-subtitle>{{ shortBreakRounds }}/4</ion-card-subtitle>
+          </ion-col>
+          <ion-col style="text-align: center">
+            <p>Short Breaks</p>
+            <ion-card-subtitle><b>0</b></ion-card-subtitle>
+          </ion-col>
+          <ion-col style="text-align: center">
+            <p>Long Breaks</p>
+            <p><b>0</b></p>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-card-content>
+  </ion-card>  
+  <section style="text-align: center;">
+    <ion-button color="success" (click)="startTimer()" fill="outline"><ion-icon name="caret-forward"></ion-icon>Start</ion-button>
+    <ion-button color="warning" (click)="pauseTimer()" fill="outline"><ion-icon name="pause"></ion-icon>Pause</ion-button>
+  </section>
+</ion-content>
+

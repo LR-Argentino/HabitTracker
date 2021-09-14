@@ -1,0 +1,6 @@
+{
+	"appId": "io.ionic.starter",
+	"appName": "HabitTracker",
+	"webDir": "www",
+	"bundledWebRuntime": false
+}

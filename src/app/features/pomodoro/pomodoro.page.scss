@@ -1,0 +1,33 @@
+/*
+bis zu 1024 Pixel (1024 : 16 = 64em)
+bis zu 800 Pixel (800 : 16 = 50em)
+bis zu 480 Pixel (480 : 16 = 30em)
+*/
+
+@media screen and (max-width: 30em) {
+    .pomodoro-text {
+        font-size: .8rem;
+    }
+    .long-break-text{
+        font-size: .8rem;
+    }
+    
+    .short-break-text{
+        font-size: .8rem;
+    }
+}
+
+@media screen and (max-width: 20em) {
+    .pomodoro-text {
+        font-size: .7rem;
+    }
+    .long-break-text{
+        font-size: .7rem;
+    }
+    
+    .short-break-text{
+        font-size: .7rem;
+    }
+}
+
+

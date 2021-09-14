@@ -1,20 +1,27 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+    <ion-img [src]="'../../assets/img/home/welcome_bg.svg'" class="bg-img"></ion-img>
+    <ion-img [src]="'../../assets/img/home/welcome_habit.svg'" class="habit-img"></ion-img>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <div>
+          <ion-text style="text-align: center;">
+            <h1>Habit Tracker</h1>
+          </ion-text>
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <div class="btn">
+          <ion-button (click)="loginViaGoogle()">
+            <ion-icon slot="start" expand="block" name="log-in-outline"></ion-icon>
+            SignIn with Google
+          </ion-button>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  </ion-content>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
-</ion-content>
+
